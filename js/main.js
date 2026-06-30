@@ -125,9 +125,9 @@ window.addEventListener("DOMContentLoaded",function(){
     //about timeline
     const aboutTl=gsap.timeline({
         scrollTrigger : {
-            trigger:".about",
-            start : "top 50%",
-            toggleActions:"restart none restart none"
+            trigger: ".about",
+            start: "top 50%",
+            // toggleActions:"restart none none none"
         }
     })
     aboutTl
@@ -138,8 +138,10 @@ window.addEventListener("DOMContentLoaded",function(){
     //index timeline
     const indexTl=gsap.timeline({
         scrollTrigger : {
-            trigger:".index",
-            start : "top 50%"
+            trigger: ".index",
+            start: "top 50%",
+            end: "bottom 100%",
+            toggleActions:"restart none restart none"
         }
     })
     indexTl
@@ -148,5 +150,110 @@ window.addEventListener("DOMContentLoaded",function(){
     .from(".index .content li:nth-child(2)",{y:50, opacity:0, duration:0.4})
     .from(".index .content li:nth-child(3)",{y:50, opacity:0, duration:0.4})
     
+    // selecto overview Tl
+    const stOverviewTl=gsap.timeline({
+        scrollTrigger:{
+            trigger: "#selecto .overview",
+            start: "top 50%",            
+            end: "bottom 100%",          
+            toggleActions:"restart none restart none"
+        }
+    })
+    if(window.innerWidth >= 930){     
+        stOverviewTl
+        .from("#selecto .overview img.desktop", {x:20, opacity:0, duration:0.4})
+        .from("#selecto .overview img.mobile", {x:20, opacity:0, duration:0.4})
+        .from("#selecto .overview .title", {x:-20, opacity:0, duration:0.4})    
+        .from("#selecto .overview .desc", {x:-20, opacity:0, duration:0.4},"<")    
+        .from("#selecto .overview .taskdesc", {x:-20, opacity:0, duration:0.4})   
+    }
+    else {
+        stOverviewTl
+        .from("#selecto .overview .title", {x:-20, opacity:0, duration:0.4})    
+        .from("#selecto .overview .desc", {x:-20, opacity:0, duration:0.4},"<")  
+        .from("#selecto .overview img.desktop", {x:20, opacity:0, duration:0.4})
+        .from("#selecto .overview img.mobile", {x:20, opacity:0, duration:0.4})         
+        .from("#selecto .overview .taskdesc", {x:-20, opacity:0, duration:0.4})   
+    }
+   
+    // selecto design system Tl
+    const stDesignTl=gsap.timeline({
+        scrollTrigger:{
+            trigger: "#selecto .design_system",
+            start: "top 50%",            
+            end: "bottom 100%",
+            toggleActions:"restart none restart none"           
+        }
+    })
+    stDesignTl
+    .from("#selecto .color_system .title", {y:20, opacity:0, duration:0.4})
+    gsap.from("#selecto .typo_system .title", {y:20, opacity:0, duration:0.4,
+          scrollTrigger:{
+            trigger: "#selecto .typo_system",
+            start: "top 50%",                        
+            toggleActions:"restart none restart none"           
+        }
+    })
 
+    // selecto Asis Tl
+    const stAsisTl=gsap.timeline({
+        scrollTrigger:{
+            trigger: "#selecto .asis",
+            start: "top 50%",                        
+            toggleActions:"restart none restart none"           
+        }
+    })
+    stAsisTl
+    .from("#selecto .asis .title", {y:20, opacity:0, duration:0.4})
+    .from("#selecto .asis .desc", {y:20, opacity:0, duration:0.4})
+
+    // select Tobe Tl
+    const stTobeTl=gsap.timeline({
+        scrollTrigger:{
+            trigger: "#selecto .tobe",
+            start: "top 50%",                        
+            toggleActions:"restart none restart none"           
+        }
+    })
+    stTobeTl
+    .from("#selecto .tobe .title", {y:20, opacity:0, duration:0.4})
+    .from("#selecto .tobe .desc", {y:20, opacity:0, duration:0.4})
+    .from("#selecto .tobe_desktop h4", {y:20, opacity:0, duration:0.4})
+    gsap.from("#selecto .tobe_mobile h4", {y:20, opacity:0, duration:0.4, 
+        scrollTrigger:{
+            trigger : ".tobe_mobile",
+            start:"top 50%",
+            toggleActions:"restart none restart none"           
+        }
+    })
+
+    // 갤러리 썸네일 상세 보기
+    const thumbs = document.querySelectorAll(".thumb");
+    const modal = document.querySelector(".modal");
+    const modalImg = document.querySelector(".modal_content img");
+    const closeBtn = document.querySelector(".close");
+
+    thumbs.forEach(item=>{
+        item.addEventListener("click",()=>{
+            modal.classList.add("active");
+            modalImg.src=item.querySelector("img").dataset.full;
+            document.body.style.overflow="hidden";
+        });
+    });
+    function closeModal(){
+        modal.classList.remove("active");
+        document.body.style.overflow="";
+    }
+    closeBtn.addEventListener("click",closeModal);
+
+    modal.addEventListener("click",(e)=>{
+        if(e.target===modal){
+            closeModal();
+        }
+    });
+    window.addEventListener("keydown",(e)=>{
+        if(e.key==="Escape"){
+            closeModal();
+        }
+    });
 });

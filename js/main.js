@@ -6,6 +6,7 @@ window.addEventListener("DOMContentLoaded",function(){
     let tab=document.querySelector(".tab")
     let dim=document.querySelector(".dim")
     let mGnbList=document.querySelectorAll(".m_gnb li")
+    let topBtn=document.querySelector(".top_btn")
     
     let pageList=[];
     pageList[0]=document.querySelector("#main");
@@ -101,6 +102,13 @@ window.addEventListener("DOMContentLoaded",function(){
 		}
 	});
 
+    // top btn
+    topBtn.addEventListener("click",function(){
+        // e.preventDefault();      
+        gsap.to(window, {scrollTo : 0, duration:0.4})      
+    })
+    
+
     // cover timeline
     const coverTl=gsap.timeline({
         scrollTrigger : {
@@ -148,9 +156,7 @@ window.addEventListener("DOMContentLoaded",function(){
     })
     indexTl
     .from(".index .title",{y:50, opacity:0, duration:0.4})
-    .from(".index .content li:nth-child(1)",{y:50, opacity:0, duration:0.4})
-    .from(".index .content li:nth-child(2)",{y:50, opacity:0, duration:0.4})
-    .from(".index .content li:nth-child(3)",{y:50, opacity:0, duration:0.4})
+    .from(".index .content li",{y:50, opacity:0, duration:0.4, stagger:0.2})
     
     // selecto overview Tl
     const stOverviewTl=gsap.timeline({
@@ -174,8 +180,8 @@ window.addEventListener("DOMContentLoaded",function(){
         .from("#selecto .overview .title", {x:-20, opacity:0, duration:0.4})    
         .from("#selecto .overview .desc", {x:-20, opacity:0, duration:0.4},"<")  
         .from("#selecto .overview img.desktop", {x:20, opacity:0, duration:0.4})
-        .from("#selecto .overview img.mobile", {x:20, opacity:0, duration:0.4})         
-        .from("#selecto .overview .taskdesc", {x:-20, opacity:0, duration:0.4})   
+        .from("#selecto .overview img.mobile", {x:-20, opacity:0, duration:0.4})         
+        .from("#selecto .overview .taskdesc", {x:20, opacity:0, duration:0.4})   
     }
    
     // selecto color system Tl
@@ -271,8 +277,8 @@ window.addEventListener("DOMContentLoaded",function(){
         .from("#snpmall .overview .title", {x:-20, opacity:0, duration:0.4})    
         .from("#snpmall .overview .desc", {x:-20, opacity:0, duration:0.4},"<")  
         .from("#snpmall .overview img.desktop", {x:20, opacity:0, duration:0.4})
-        .from("#snpmall .overview img.mobile", {x:20, opacity:0, duration:0.4})         
-        .from("#snpmall .overview .taskdesc", {x:-20, opacity:0, duration:0.4})   
+        .from("#snpmall .overview img.mobile", {x:-20, opacity:0, duration:0.4})         
+        .from("#snpmall .overview .taskdesc", {x:20, opacity:0, duration:0.4})   
     }
    
     // snpmall color system Tl
@@ -356,32 +362,32 @@ window.addEventListener("DOMContentLoaded",function(){
     })    
     dpageTl
     .from("#work h2", {y:20, opacity:0, duration:0.4})
-    .from(".detail_page h3", {y:20, opacity:0, duration:0.4})    
-    .from(".detail_page .content li", {y:20, opacity:0, duration:0.4, stagger:0.15})    
+    .from("#detail_page h3", {y:20, opacity:0, duration:0.4})    
+    .from("#detail_page .content li", {y:20, opacity:0, duration:0.4, stagger:0.15})    
     
     // event page Tl
     const epageTl=gsap.timeline({
         scrollTrigger:{
-            trigger: "#work .event_page",
+            trigger: "#work #event_page",
             start: "top 50%",                        
             toggleActions:"restart none restart none"           
         }
     })
     epageTl    
-    .from(".event_page h3", {y:20, opacity:0, duration:0.4})
-    .from(".event_page .content li", {y:20, opacity:0, duration:0.4, stagger:0.15})
+    .from("#event_page h3", {y:20, opacity:0, duration:0.4})
+    .from("#event_page .content li", {y:20, opacity:0, duration:0.4, stagger:0.15})
 
     // package Tl
     const packageTl=gsap.timeline({
         scrollTrigger:{
-            trigger: "#work .package",
+            trigger: "#work #package",
             start: "top 50%",                        
             toggleActions:"restart none restart none"           
         }
     })
     packageTl    
-    .from(".package h3", {y:20, opacity:0, duration:0.4})
-    .from(".package .content li", {y:20, opacity:0, duration:0.4, stagger:0.15})
+    .from("#package h3", {y:20, opacity:0, duration:0.4})
+    .from("#package .content li", {y:20, opacity:0, duration:0.4, stagger:0.15})
     
 
     // 갤러리 썸네일 상세 보기
@@ -413,4 +419,17 @@ window.addEventListener("DOMContentLoaded",function(){
             closeModal();
         }
     });
+
+    // contact Tl
+    const contactTl=gsap.timeline({
+        scrollTrigger:{
+            trigger: "#contact",
+            start: "top 50%",                        
+            toggleActions:"restart none restart none"           
+        }
+    })
+    contactTl
+    .from("#contact .title", {y:20, opacity:0, duration:0.4})
+    .from("#contact .closing", {y:20, opacity:0, duration:0.4})
+    .from("#contact .info", {y:20, opacity:0, duration:0.4})
 });

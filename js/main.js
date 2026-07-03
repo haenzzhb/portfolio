@@ -114,7 +114,7 @@ window.addEventListener("DOMContentLoaded",function(){
         scrollTrigger : {
             trigger:"#main",
             start : "top 50%",
-            toggleActions:"restart none restart none"
+            toggleActions:"restart none none none"
         }
     })
     function coverFloat(){
@@ -137,7 +137,7 @@ window.addEventListener("DOMContentLoaded",function(){
         scrollTrigger : {
             trigger: ".about",
             start: "top 50%",
-            // toggleActions:"restart none none none"
+            toggleActions:"restart none none none"
         }
     })
     aboutTl
@@ -151,7 +151,7 @@ window.addEventListener("DOMContentLoaded",function(){
             trigger: ".index",
             start: "top 50%",
             end: "bottom 100%",
-            toggleActions:"restart none restart none"
+            toggleActions:"restart none none none"
         }
     })
     indexTl
@@ -164,7 +164,7 @@ window.addEventListener("DOMContentLoaded",function(){
             trigger: "#selecto .overview",
             start: "top 50%",            
             end: "bottom 100%",          
-            toggleActions:"restart none restart none"
+            toggleActions:"restart none none none"
         }
     })
     if(window.innerWidth >= 930){     
@@ -190,7 +190,7 @@ window.addEventListener("DOMContentLoaded",function(){
             trigger: "#selecto .design_system",
             start: "top 50%",            
             end: "bottom 100%",
-            toggleActions:"restart none restart none"           
+            toggleActions:"restart none none none"           
         }
     })
     stColorTl
@@ -203,7 +203,7 @@ window.addEventListener("DOMContentLoaded",function(){
             trigger: "#selecto .typo_system",
             start: "top 50%",            
             end: "bottom 100%",
-            toggleActions:"restart none restart none"           
+            toggleActions:"restart none none none"           
         }
     })
     stTypoTl
@@ -215,7 +215,7 @@ window.addEventListener("DOMContentLoaded",function(){
         scrollTrigger:{
             trigger: "#selecto .asis",
             start: "top 50%",                        
-            toggleActions:"restart none restart none"           
+            toggleActions:"restart none none none"           
         }
     })
     stAsisTl
@@ -228,7 +228,7 @@ window.addEventListener("DOMContentLoaded",function(){
         scrollTrigger:{
             trigger: "#selecto .tobe",
             start: "top 50%",                        
-            toggleActions:"restart none restart none"           
+            toggleActions:"restart none none none"           
         }
     })
     stTobeTl
@@ -261,7 +261,7 @@ window.addEventListener("DOMContentLoaded",function(){
             trigger: "#snpmall .overview",
             start: "top 50%",            
             end: "bottom 100%",          
-            toggleActions:"restart none restart none"
+            toggleActions:"restart none none none"
         }
     })
     if(window.innerWidth >= 930){     
@@ -287,7 +287,7 @@ window.addEventListener("DOMContentLoaded",function(){
             trigger: "#snpmall .design_system",
             start: "top 50%",            
             end: "bottom 100%",
-            toggleActions:"restart none restart none"           
+            toggleActions:"restart none none none"           
         }
     })
     snpColorTl
@@ -300,7 +300,7 @@ window.addEventListener("DOMContentLoaded",function(){
             trigger: "#snpmall .typo_system",
             start: "top 50%",            
             end: "bottom 100%",
-            toggleActions:"restart none restart none"           
+            toggleActions:"restart none none none"           
         }
     })
     snpTypoTl
@@ -312,7 +312,7 @@ window.addEventListener("DOMContentLoaded",function(){
         scrollTrigger:{
             trigger: "#snpmall .asis",
             start: "top 50%",                        
-            toggleActions:"restart none restart none"           
+            toggleActions:"restart none none none"           
         }
     })
     snpAsisTl
@@ -325,7 +325,7 @@ window.addEventListener("DOMContentLoaded",function(){
         scrollTrigger:{
             trigger: "#snpmall .tobe",
             start: "top 50%",                        
-            toggleActions:"restart none restart none"           
+            toggleActions:"restart none none none"           
         }
     })
     snpTobeTl
@@ -357,7 +357,7 @@ window.addEventListener("DOMContentLoaded",function(){
         scrollTrigger:{
             trigger: "#work",
             start: "top 50%",                        
-            toggleActions:"restart none restart none"           
+            toggleActions:"restart none none none"           
         }
     })    
     dpageTl
@@ -370,7 +370,7 @@ window.addEventListener("DOMContentLoaded",function(){
         scrollTrigger:{
             trigger: "#work #event_page",
             start: "top 50%",                        
-            toggleActions:"restart none restart none"           
+            toggleActions:"restart none none none"           
         }
     })
     epageTl    
@@ -382,7 +382,7 @@ window.addEventListener("DOMContentLoaded",function(){
         scrollTrigger:{
             trigger: "#work #package",
             start: "top 50%",                        
-            toggleActions:"restart none restart none"           
+            toggleActions:"restart none none none"          
         }
     })
     packageTl    
@@ -436,7 +436,7 @@ window.addEventListener("DOMContentLoaded",function(){
         scrollTrigger:{
             trigger: "#contact",
             start: "top 50%",                        
-            toggleActions:"restart none restart none"           
+            toggleActions:"restart none none none"           
         }
     })
     contactTl

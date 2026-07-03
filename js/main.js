@@ -394,12 +394,23 @@ window.addEventListener("DOMContentLoaded",function(){
     const thumbs = document.querySelectorAll(".thumb");
     const modal = document.querySelector(".modal");
     const modalImg = document.querySelector(".modal_content img");
+    const modalTitle = document.querySelector(".modal_title");
+    const modalRole = document.querySelector(".modal_role");
+    const modalTool = document.querySelector(".modal_tool");
+    const modalSize = document.querySelector(".modal_size");
+    const modalDesc = document.querySelector(".modal_desc");
     const closeBtn = document.querySelector(".close");
 
     thumbs.forEach(item=>{
         item.addEventListener("click",()=>{
             modal.classList.add("active");
-            modalImg.src=item.querySelector("img").dataset.full;
+            modalImg.src=item.querySelector("img").dataset.full;            
+            modalTitle.textContent = item.dataset.title;
+            modalRole.textContent = item.dataset.role;
+            modalTool.textContent = item.dataset.tool;
+            modalSize.textContent = item.dataset.size;
+            modalDesc.textContent = item.dataset.desc;
+
             document.body.style.overflow="hidden";
         });
     });

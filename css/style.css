@@ -1705,8 +1705,7 @@ main .inner {
 #work .title h3 {
     display: inline-block;
     position: relative;
-    font-size: clamp(20px,1.7vw,25px);    
-    /* border: 1px solid #f90; */
+    font-size: clamp(20px,1.7vw,25px);        
 } 
 #work .title h3::after {
     position: absolute;
@@ -1807,7 +1806,7 @@ main .inner {
 .modal.active{
     display:flex;
 }
-.modal_content{        
+.modal_content {         
     height:90vh;
     overflow-y:auto;
     background:#fff;
@@ -1815,10 +1814,35 @@ main .inner {
     text-align: center;    
 }
 .modal_content img {
-    display:block;
+    display:inline-block;
     max-width:85vw;    
     width:auto;
     height:auto;          
+    margin-top: 30px;
+}
+.modal_content .modal_title {    
+    position: relative;
+    color: #333;
+    font-weight: 700;    
+    line-height: 2.5;    
+}
+.modal_content .modal_title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+}
+.modal_content p {    
+    color: #666;
+    line-height: 2;
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 1.6;
+    word-break: keep-all;
 }
 .close{
     position:absolute;
@@ -1827,7 +1851,7 @@ main .inner {
     background: none;
     border: none;
     color:#fff;
-    font-size:clamp(40px,4.1vw,60px);    
+    font-size:clamp(50px,4.1vw,60px);    
     cursor:pointer;        
 }
 @media (max-width:1440px){

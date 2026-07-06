@@ -361,7 +361,7 @@ window.addEventListener("DOMContentLoaded",function(){
         }
     })    
     dpageTl
-    .from("#work h2", {y:20, opacity:0, duration:0.4})
+    .from("#work .title", {y:20, opacity:0, duration:0.4})
     .from("#detail_page h3", {y:20, opacity:0, duration:0.4})    
     .from("#detail_page .content li", {y:20, opacity:0, duration:0.4, stagger:0.15})    
     

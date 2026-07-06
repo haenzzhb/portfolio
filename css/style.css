@@ -1699,6 +1699,12 @@ main .inner {
 #work .workpage {
     padding: clamp(80px, 6.9vw, 100px) 0 clamp(15px, 2vw, 30px) 0;
 }
+#work .title p {
+    /* padding-bottom: 0.5em ; */
+    font-size: clamp(24px, 2.5vw, 36px);
+    font-weight: 900;
+    color: #F55823;
+}
 #work .title h2 {
     color: #F55823;
 }

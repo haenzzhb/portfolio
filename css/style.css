@@ -1751,7 +1751,7 @@ main .inner {
     line-height: 1.4;    
     color: #7c7c7c;
 }
-#work .thumb .overlay{
+#work .thumb .overlay {
     position:absolute;
     left:0;
     top:0;
@@ -1874,7 +1874,7 @@ main .inner {
     }
     #work .workpage .content .taskdesc p {         
     font-weight: 700;    
-}
+    }
     .modal_content{    
         height:80vh;    
     }
@@ -1911,25 +1911,22 @@ main .inner {
     color: #eaeaea;
     line-height: 1.6;
     font-weight: 400;
-    font-size: 1em;    
+    font-size: 1em;
 }
 #contact ul {
     padding: clamp(40px, 4.1vw, 60px) 0 0 0;
     color: #eaeaea;    
 }
 #contact .info li {        
-    display: flex;
-    justify-content: space-between;      
+    display: flex;    
     flex-wrap: wrap;
     line-height: 1.8;
     font-size: 0.9em;
     font-weight: 400;
-    letter-spacing: 1px;    
+    letter-spacing: 1px;            
 }
-#contact .info li span {    
-    display: block;
-    width: clamp(70%, 85%, 90%);
-    /* border: 1px solid #90f; */
+#contact .info li .label {    
+    width: clamp(90px, 8.3vw, 120px);   
 }
 #contact .copyright {
     font-size: 14px;    
@@ -1955,8 +1952,11 @@ main .inner {
     #contact .closing p > span{
         display: block;
     }
-    #contact .info li span {        
-        width: 100%;
+    #contact .info li {        
         padding-bottom: 20px;
+    }
+    #contact .info li span {        
+        display: block;
+        width: 100%;        
     }
 }

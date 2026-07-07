@@ -206,6 +206,11 @@ main .inner {
 .top_btn:hover {
     background-color: #505050;
 }
+.top_btn.hide {
+    opacity:0;
+    pointer-events:none;
+    transition: opacity 0.4s;
+}
 /* main-cover */
 .cover {
     padding: clamp(80px, 10.4vw, 150px) 0; 

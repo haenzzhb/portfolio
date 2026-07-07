@@ -2,8 +2,8 @@ window.addEventListener("DOMContentLoaded",function(){
     let header=document.querySelector("#header");
     let menuList=document.querySelectorAll("#gnb li");        
     let sub=document.querySelectorAll("section");    
-    let mGnb=document.querySelector(".m_gnb")
     let tab=document.querySelector(".tab")
+    let mGnb=document.querySelector(".m_gnb")    
     let dim=document.querySelector(".dim")
     let mGnbList=document.querySelectorAll(".m_gnb li")
     let topBtn=document.querySelector(".top_btn")
@@ -63,6 +63,7 @@ window.addEventListener("DOMContentLoaded",function(){
         })
     });
     
+    // mobile menu toggle
 	let menuClose=false;
 	let menuTarget=0;
 
@@ -73,6 +74,7 @@ window.addEventListener("DOMContentLoaded",function(){
 		mGnb.classList.toggle("active");        
 		tab.classList.toggle("active");
 		dim.classList.toggle("active");
+        topBtn.classList.add("hide");
 	});
 
 	dim.addEventListener("click", function(){
@@ -80,6 +82,7 @@ window.addEventListener("DOMContentLoaded",function(){
 		mGnb.classList.remove("active");
 		tab.classList.remove("active");
 		dim.classList.remove("active");
+        topBtn.classList.remove("hide");
 	});
 
 	mGnbList.forEach(function(item, i){
@@ -92,6 +95,7 @@ window.addEventListener("DOMContentLoaded",function(){
 			mGnb.classList.remove("active");
 			tab.classList.remove("active");
 			dim.classList.remove("active");
+            topBtn.classList.remove("hide");
 		});
 	});
 

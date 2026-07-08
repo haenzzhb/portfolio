@@ -824,9 +824,6 @@ main .inner {
     line-height: 1.6;
     color: #EFEFEF;
 }
-#selecto .tobe .desc span {
-    display: block;
-}
 #selecto .tobe .inner h3 {
     color: #F55823;
 }
@@ -873,15 +870,15 @@ main .inner {
         padding: clamp(80px, 10.4vw, 150px) 1.5em;        
     }
 }
-@media (max-width:930px){
-    #selecto .tobe .desc span {
-       display: inline;
-    }
+@media (max-width:930px){   
     #selecto .tobe .tobe_mobile .img_area1 li {
         width: calc((100% - clamp(15px, 2vw, 30px))/2);      
     }
 }
 @media (max-width:720px){    
+    #selecto .tobe .desc p{
+        padding: 0 0 1em 0;           
+    }
     #selecto .tobe .tobe_desktop .img_area1 {
         width: 100%;
         height: auto; 
@@ -1263,15 +1260,15 @@ main .inner {
         padding: clamp(80px, 10.4vw, 150px) 1.5em;        
     }
 }
-@media (max-width:930px){
-    #snpmall .tobe .desc span {
-       display: inline;
-    }
+@media (max-width:930px){    
     #snpmall .tobe .tobe_mobile .img_area1 li {
         width: calc((100% - clamp(15px, 2vw, 30px)*1)/2);      
     }
 }
 @media (max-width:720px){    
+    #snpmall .tobe .desc p{
+        padding: 0 0 1em 0;           
+    }
     #snpmall .tobe .tobe_desktop .img_area1 {
         width: 100%;
         height: auto; 
